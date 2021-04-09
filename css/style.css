@@ -831,27 +831,53 @@ body.ie ._ibg img {
 }
 
 .popup__body {
+  color: #fff;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: #fff;
-  padding: 50px;
+  background: #111a21;
+  padding: 50px 20px;
   width: 100%;
   max-width: 800px;
 }
 
 .popup__close {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   z-index: 30;
   background: url("../img/icons/close.svg") 0 0 no-repeat;
+}
+
+.popup__list-title {
+  font-size: 16px;
+  margin: 0px 0px 20px 0px;
+}
+
+.popup__list {
+  margin: 0px 0px 30px 0px;
+  line-height: 150%;
+}
+
+.popup__link {
+  padding: 0px 20px;
+}
+
+.popup__link_square::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  right: 20px;
+  height: 5px;
+  width: 5px;
+  background: #fff500;
 }
 
 /*
@@ -1322,6 +1348,10 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 720px) {
+  .popup__list-title {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 400));
+  }
+
   .contacts__title {
     font-size: calc(14px + 2 * ((100vw - 320px) / 400));
   }
